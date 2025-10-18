@@ -1,6 +1,6 @@
 :root {
-    --primary-pink: #FF86C3; 
-    --secondary-blue: #41C6CD; 
+    --primary-pink: #FF86C3; /* A vibrant pink */
+    --secondary-blue: #41C6CD; /* A bright cyan/blue */
     --white: #FFFFFF;
     --light-purple: #e0b0ff; 
     --light-blue-bg: #e0f8ff;
@@ -8,18 +8,18 @@
     --text-color: #333333;
     --light-gray: #f9f9f9;
     --call-to-action-yellow: #FFD93D;
-    --table-header-bg: var(--primary-pink); 
-    --table-row-even: #f5f5f5; 
-    --table-border-color: #e0e0e0; 
+    --table-header-bg: var(--primary-pink); /* Pink for table header */
+    --table-row-even: #f5f5f5; /* Light gray for even rows */
+    --table-border-color: #e0e0e0; /* Light border color */
     --grey-bg: #1a1a1a;
     --text-color-light: #f5f5f5; 
     --dark: #000000;
-    --title-cyan: #4DC2C5; 
-    --form-pink: #FF86C3; 
+    --title-cyan: #4DC2C5; /* Teal/Cyan color for title and button */
+    --form-pink: #FF86C3; /* Bright Pink for the form background */
     --text-white: #FFFFFF;
-    --box-gray: rgba(0, 0, 0, 0.5); 
-    --input-background: #F0F0F0; 
-    --input-border: #D1D5DB; 
+    --box-gray: rgba(0, 0, 0, 0.5); /* Semi-transparent background for card */
+    --input-background: #F0F0F0; /* Light background for inputs */
+    --input-border: #D1D5DB; /* Light border for inputs */
     --title-font: 'Alfa Slab One', 'Archivo Black', sans-serif;
     --body-font: 'Inter', sans-serif;
 }
@@ -58,11 +58,11 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between; /* Logo left, nav right */
     align-items: center;
     padding: 15px 40px; 
     background-color: var(--white);
-    position: relative; 
+    position: relative; /* Needed for the bottom line positioning */
 }
 
 nav ul {
@@ -81,13 +81,13 @@ nav ul li a {
     transition: 
         color 0.3s ease, 
         transform 0.3s ease, 
-        text-shadow 0.3s ease; 
+        text-shadow 0.3s ease; /* Smooth transitions */
 }
 
 nav ul li a:hover {
-    color: var(--secondary-blue); 
-    transform: scale(1.08);       
-    text-shadow: 0 4px 10px rgba(65, 198, 205, 0.4); 
+    color: var(--secondary-blue); /* Teal color */
+    transform: scale(1.08);       /* Slight pop-out */
+    text-shadow: 0 4px 10px rgba(65, 198, 205, 0.4); /* Glow-y depth */
 }
 
 .navbar-bottom-line {
@@ -213,7 +213,7 @@ nav ul li a:hover {
     font-family: 'Montserrat', sans-serif;
     color: var(--white);
     font-size: 1.2em;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); 
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* ✨ Added shadow */
 }
 
 .container {
@@ -361,7 +361,7 @@ nav ul li a:hover {
     margin: 0 auto;
     padding: 40px 60px;
     position: relative;
-    z-index: 2; 
+    z-index: 2; /* Ensure content is above the overlay */
 }
 
 /* --- Banner Title Styling --- */
@@ -392,22 +392,25 @@ nav ul li a:hover {
 
 /* --- Section Container --- */
 .about-us-section {
-    padding: 80px 60px; 
-    max-width: 1400px; 
+    padding: 80px 60px; /* Padding around the entire section */
+    max-width: 1400px; /* Limit width and center */
     margin: 0 auto;
-    background-color: var(--white); 
+    background-color: var(--white); /* Assuming a white background for the section */
 }
 
 /* --- Section Title Styling --- */
 .section-title {
+    /* Use a heavy, blocky font similar to the image */
     font-family: 'Arial Black', sans-serif; 
     font-size: 3em;
     font-weight: 900;
-    margin-bottom: 20px; 
+    margin-bottom: 20px; /* Space below the title */
+    /* REMOVED: Specific color definition, assuming the next class handles it */
 }
 
 .teal-title {
-    color: var(--secondary-blue); 
+    color: var(--secondary-blue); /* The distinct teal/cyan color */
+    /* Add a subtle drop shadow to match the slightly raised look */
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5), 
                  -1px -1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -422,21 +425,21 @@ nav ul li a:hover {
 
 /* --- Text Styling --- */
 .about-text {
-    flex: 1;
+    flex: 1; /* Allow the text area to grow and take space */
     font-size: 1.3em;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    max-width: 600px; 
-    padding-top: 20px; 
+    max-width: 600px; /* Max width for readability */
+    padding-top: 20px; /* Push the text down slightly to align with the image top */
     padding-left: 90px;
-    margin-right: 0; 
+    margin-right: 0; /* Space between text and image */
 }
 
 /* --- Image Styling --- */
 .about-image {
-    flex: 0 0 auto; 
-    max-width: 450px; 
+    flex: 0 0 auto; /* Prevent the image from shrinking */
+    max-width: 450px; /* Control the maximum size of the image */
     height: auto;
     display: block;
     border-radius: 20px; 
@@ -449,19 +452,19 @@ nav ul li a:hover {
 .history-section {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 40px 40px 80px; 
+    padding: 40px 40px 80px; /* Top, sides, bottom padding */
     background-color: var(--white);
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif; /* Consistent body font */
 }
 
 /* --- Section Title Banner (HISTORY OF BINI) --- */
 .history-banner {
     position: relative;
     width: 100%;
-    height: 300px; 
+    height: 300px; /* Define a fixed height for the banner area */
     margin-bottom: 50px;
     overflow: hidden;
-    border-radius: 20px; 
+    border-radius: 20px; /* Subtle rounding for the image/banner area */
 }
 
 .history-image-banner {
@@ -469,6 +472,7 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
+    /* Move the image up slightly to show the faces better */
     object-position: center 20%; 
 }
 
@@ -540,8 +544,8 @@ nav ul li a:hover {
 }
 
 .block-image {
-    flex-shrink: 0; 
-    width: 450px; 
+    flex-shrink: 0; /* Prevents image from shrinking */
+    width: 450px; /* Fixed width for the image column */
     height: auto;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -568,7 +572,7 @@ nav ul li a:hover {
 
 .status-image-wrapper {
     flex-shrink: 0;
-    width: 450px; 
+    width: 450px; /* Fixed width to match other images */
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     overflow: hidden;
@@ -578,6 +582,7 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     display: block;
+    /* Adjust object-fit if the image needs to fill the container differently */
     object-fit: cover; 
 }
 
@@ -627,6 +632,7 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
+    /* Adjust object-position for the mountain photo */
     object-position: center 40%; 
 }
 
@@ -666,7 +672,7 @@ nav ul li a:hover {
 }
 
 .yellow-title {
-    color: var(--call-to-action-yellow);
+    color: var(--call-to-action-yellow); /* Using the same yellow as the CTA bar */
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5), 
                  -1px -1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -674,12 +680,13 @@ nav ul li a:hover {
 /* Ensure full-width titles span the entire container in a grid layout */
 .full-width {
     grid-column: 1 / -1;
-    text-align: center; 
+    text-align: center; /* Center the "Music and streaming records" title */
 }
 
 /* --- Concert and Touring Milestones Block (Custom Layout) --- */
 .info-block {
     display: grid;
+    /* Define 3 columns for this section: Image | Image | Text */
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     margin-bottom: 30px;
@@ -703,12 +710,12 @@ nav ul li a:hover {
 /* Position the two concert images in the first two columns */
 .info-block > .block-image:nth-child(1) {
     grid-column: 1 / 2;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Space between the two stacked images */
 }
 
 .info-block > .block-image:nth-child(2) {
     grid-column: 1 / 2;
-    grid-row: 2 / 3; 
+    grid-row: 2 / 3; /* Stack the second image below the first in column 1 */
 }
 
 /* Position the text content in the third column */
@@ -805,7 +812,7 @@ nav ul li a:hover {
 .awards-table-section {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 40px 0 80px; 
+    padding: 40px 0 80px; /* Adjust top/bottom padding */
     background-color: var(--white);
     font-family: Arial, sans-serif;
 }
@@ -814,10 +821,10 @@ nav ul li a:hover {
 .awards-banner {
     position: relative;
     width: 100%;
-    height: 250px; 
+    height: 250px; /* Fixed height for the banner */
     margin-bottom: 50px;
     overflow: hidden;
-    border-radius: 20px; 
+    border-radius: 20px; /* Rounded corners for the banner */
 }
 
 .awards-image-banner {
@@ -825,7 +832,7 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
-    object-position: center 45%; 
+    object-position: center 45%; /* Adjust to frame BINI members well */
 }
 
 .awards-title {
@@ -850,7 +857,7 @@ nav ul li a:hover {
 /* --- Awards Header Container --- */
 .awards-header {
     text-align: center;
-    margin: 40px auto; 
+    margin: 40px auto; /* Slightly less margin for smaller appearance */
     padding: 0 40px;
     max-width: 1400px;
     box-sizing: border-box;
@@ -859,6 +866,7 @@ nav ul li a:hover {
 /* --- H2 Title Styling (Made smaller) --- */
 .awards-header h2 {
     font-family: 'Arial Black', sans-serif;
+    /* REDUCED FONT SIZE: Adjusting from 4.5em max to 3.5em max */
     font-size: clamp(2em, 5vw, 3.5em); 
     font-weight: 900;
     line-height: 1.1; 
@@ -868,27 +876,27 @@ nav ul li a:hover {
 
     /* Scaled-down Text Shadow for a smaller title */
     text-shadow: 
-        3px 3px 0 var(--white),      
+        3px 3px 0 var(--white),      /* White outline/emboss */
         -3px -3px 0 var(--white),
-        0 0 8px rgba(0, 0, 0, 0.2),  
-        6px 6px 12px rgba(0, 0, 0, 0.4);
+        0 0 8px rgba(0, 0, 0, 0.2),  /* Inner glow */
+        6px 6px 12px rgba(0, 0, 0, 0.4); /* Drop shadow */
     
     display: inline-block;
 }
 
 /* --- Table Wrapper for Responsiveness --- */
 .awards-table-wrapper {
-    overflow-x: auto; 
-    margin: 0 20px; 
-    border-radius: 15px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    overflow-x: auto; /* Enable horizontal scrolling for the table on small screens */
+    margin: 0 20px; /* Padding on sides for the table wrapper */
+    border-radius: 15px; /* Rounded corners for the entire table container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table block */
 }
 
 /* --- Table Styling --- */
 table {
     width: 100%;
-    border-collapse: collapse; 
-    min-width: 800px; 
+    border-collapse: collapse; /* Collapse borders for a clean look */
+    min-width: 800px; /* Ensure table doesn't get too narrow on smaller screens */
     background-color: var(--white);
 }
 
@@ -901,7 +909,7 @@ th {
     color: var(--white);
     font-size: 1.1em;
     font-weight: bold;
-    text-align: center; 
+    text-align: center; /* Center header text */
     padding: 15px 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -919,11 +927,11 @@ thead tr:first-child th:last-child {
 /* Table Body Cells */
 td {
     padding: 12px 10px;
-    text-align: center; 
+    text-align: center; /* Center cell content */
     font-size: 0.95em;
     color: var(--text-color);
-    border-bottom: 1px solid var(--table-border-color); 
-    border-right: 1px solid var(--table-border-color); 
+    border-bottom: 1px solid var(--table-border-color); /* Horizontal cell borders */
+    border-right: 1px solid var(--table-border-color); /* Vertical cell borders */
 }
 
 /* Remove right border from last column */
@@ -933,11 +941,11 @@ td:last-child {
 
 /* Alternating Row Colors */
 tbody tr:nth-child(even) {
-    background-color: var(--table-row-even); 
+    background-color: var(--table-row-even); /* Light gray for even rows */
 }
 
 tbody tr:hover {
-    background-color: #eaf7ff; 
+    background-color: #eaf7ff; /* Subtle hover effect */
 }
 
 tbody tr:last-child td {
@@ -960,21 +968,6 @@ tbody tr:last-child td {
     gap: 30px;
     margin-bottom: 50px;
     justify-content: center;
-}
-
-.like-icon {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
-    color: white;
-    font-size: 1.5rem;
-    text-shadow: 0 0 4px black;
-    transition: color 0.2s ease;
-}
-
-.like-icon.liked i {
-    color: red;
 }
 
 .gallery-grid img {
@@ -1045,16 +1038,17 @@ tbody tr:last-child td {
 .intro-banner {
     width: 100%;
     height: 800px;
-    background-color: var(--call-to-action-yellow);
+    /* No explicit height here, content will define it */
+    background-color: var(--call-to-action-yellow); /* Yellow background for the whole section */
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; /* Ensure nothing spills out */
 }
 
 /* --- Title Styling --- */
 .intro-banner .banner-text {
     font-family: 'Alfa Slab One', sans-serif;
-    font-size: clamp(2em, 5.5vw, 4em); 
+    font-size: clamp(2em, 5.5vw, 4em); /* ✨ slightly smaller */
     font-weight: 900;
     letter-spacing: 0.05em;
     color: var(--white);
@@ -1082,7 +1076,7 @@ tbody tr:last-child td {
     display: block; 
     width: 100%;
     height: 1060px;
-    object-fit: cover; 
+    object-fit: cover; /* Ensures the image fills the 550px height without distortion */
     border-radius: 0; 
 }
 
@@ -1109,8 +1103,8 @@ tbody tr:last-child td {
         -1px -1px 0 var(--white),
         3px 3px 5px rgba(0, 0, 0, 0.3);
         
-    margin-top: 60px; 
-    margin-bottom: 40px; 
+    margin-top: 60px; /* Space above the title */
+    margin-bottom: 40px; /* Space below the title */
     padding: 0 20px;
 }
 
@@ -1119,16 +1113,16 @@ tbody tr:last-child td {
 .album-row {
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start; /* Align content to the top */
     gap: 40px;
-    max-width: 1200px; 
-    margin: 40px auto; 
+    max-width: 1200px; /* Max width for the content area */
+    margin: 40px auto; /* Center the row */
     padding: 0 20px;
 }
 
 /* --- Album Cover Image --- */
 .album-row .album-cover {
-    flex-shrink: 0; 
+    flex-shrink: 0; /* Prevents the cover from shrinking */
     width: 300px;
     height: 300px;
     
@@ -1137,13 +1131,13 @@ tbody tr:last-child td {
     background-repeat: no-repeat;
     
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
 }
 
 /* --- Song List Container --- */
 .album-row .song-list {
-    flex-grow: 1; 
-    max-width: 500px; 
+    flex-grow: 1; /* Allows the list to take remaining space */
+    max-width: 500px; /* Limit the width of the song list text */
     padding-top: 10px;
     font-family: "Montserrat", sans-serif;
     color: var(--text-color);
@@ -1153,7 +1147,7 @@ tbody tr:last-child td {
 .album-row .song-list h3 {
     font-family: 'Arial Black', sans-serif;
     font-size: 1.8em;
-    color: var(--primary-pink); 
+    color: var(--primary-pink); /* Pink title color */
     margin-top: 0;
     margin-bottom: 20px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -1167,8 +1161,8 @@ tbody tr:last-child td {
 
 .album-row .song-list li {
     font-size: 1.05em;
-    margin-bottom: 8px; 
-    padding: 3px 5px; 
+    margin-bottom: 8px; /* Spacing between list items */
+    padding: 3px 5px; /* Padding for hover effect */
     transition: background-color 0.2s ease;
 }
 
@@ -1176,19 +1170,20 @@ tbody tr:last-child td {
 .album-row .song-list li a {
     color: var(--text-color);
     text-decoration: none;
-    display: block; 
+    display: block; /* Makes the entire list item area clickable/hoverable */
     padding: 2px 0;
 }
 
 /* --- HOVER EFFECT --- */
 .album-row .song-list li:hover {
     /* Background color change on hover */
-    background-color: rgba(255, 134, 195, 0.1); 
+    background-color: rgba(255, 134, 195, 0.1); /* Very light pink background */
     cursor: pointer;
 }
 
 .album-row .song-list li a:hover {
-    color: var(--primary-pink); 
+    /* Text color change on hover */
+    color: var(--primary-pink); /* Pink text color on hover */
     text-decoration: underline;
 }
 
@@ -1460,7 +1455,7 @@ tbody tr:last-child td {
     top: 60%; 
     left: 50%; 
     transform: translate(-50%, -50%);
-    padding-top: 20px;
+    padding-top: 10px;
     
     font-family: 'Arial Black', sans-serif; 
     font-size: clamp(1.8em, 5vw, 4em);
