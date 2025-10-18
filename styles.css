@@ -970,6 +970,21 @@ tbody tr:last-child td {
     justify-content: center;
 }
 
+.like-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 0 0 4px black;
+    transition: color 0.2s ease;
+}
+
+.like-icon.liked i {
+    color: red;
+}
+
 .gallery-grid img {
     width: 100%;
     height: auto;
@@ -1455,7 +1470,7 @@ tbody tr:last-child td {
     top: 60%; 
     left: 50%; 
     transform: translate(-50%, -50%);
-    padding-top: 10px;
+    padding-top: 20px;
     
     font-family: 'Arial Black', sans-serif; 
     font-size: clamp(1.8em, 5vw, 4em);

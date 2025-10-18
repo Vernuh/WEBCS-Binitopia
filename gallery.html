@@ -110,62 +110,71 @@
         </section>
     </main>
 
-    <!-- The Modal (Image Viewer) -->
-    <!-- The Modal (Image Viewer) -->
     <div id="imageModal" class="modal">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
 
     <script>
-        // --- Like/Unlike Functionality ---
-        document.querySelectorAll('.like-icon').forEach(icon => {
-            icon.addEventListener('click', function(event) {
-                // Stop the click event from propagating to the parent gallery-item, 
-                // which would trigger the zoom function.
-                event.stopPropagation(); 
+        // --- Like/Unlike Functionality with localStorage ---
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            const imgSrc = item.getAttribute('data-src');
+            const likeIcon = item.querySelector('.like-icon');
+
+            // ✅ Load liked state from localStorage
+            const isLiked = localStorage.getItem(`liked_${imgSrc}`);
+            if (isLiked === 'true') {
+                likeIcon.classList.add('liked');
+            }
+
+            likeIcon.addEventListener('click', function(event) {
+                event.stopPropagation(); // prevent opening the modal
                 this.classList.toggle('liked');
+
+                // ✅ Save or remove liked state in localStorage
+                if (this.classList.contains('liked')) {
+                    localStorage.setItem(`liked_${imgSrc}`, 'true');
+                } else {
+                    localStorage.removeItem(`liked_${imgSrc}`);
+                }
             });
         });
 
         // --- Zoom Modal Functionality ---
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-
-        function openModal(imageSrc, altText) {
-            modal.style.display = 'flex';
-            modalImage.src = imageSrc;
-            modalImage.alt = altText;
-        }
-
+        const modal = document.getElementById('imageModal'); 
+        const modalImage = document.getElementById('modalImage'); 
+        
+        function openModal(imageSrc, altText) { 
+            modal.style.display = 'flex'; 
+            modalImage.src = imageSrc; 
+            modalImage.alt = altText; 
+        } 
+        
         function closeModal() {
-            modal.style.display = 'none';
+            modal.style.display = 'none'; 
         }
 
-        // Add click listener to all gallery items for zooming
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('click', function() {
-                // Use data-src for the high-res modal image (the 800x800 placeholder)
                 const highResSrc = this.getAttribute('data-src');
                 const altText = this.getAttribute('data-alt');
                 openModal(highResSrc, altText);
             });
         });
 
-        // Close modal when clicking outside the image
         modal.addEventListener('click', function(event) {
             if (event.target === modal) {
                 closeModal();
             }
         });
 
-        // Close modal with ESC key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape' && modal.style.display === 'flex') {
                 closeModal();
             }
         });
     </script>
+
 
 </body>
 
