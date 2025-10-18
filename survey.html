@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <title>BINItopia</title>
+</head>
+<body class="survey-body">
+    <header class="navbar">
+
+        <a href="index.html"> 
+            <img src="img/binitopia_logo.png" alt="Binitopia Logo"> <!-- Logo -->
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="survey-page">
+        <div class="survey-card">
+            
+            <h1 class="survey-title">BLOOM FAN SURVEY</h1>
+            <p class="survey-subtitle">Help us understand your favorite BINI moments and preferences!</p>
+            
+            <form class="survey-form" id="surveyForm">
+                
+                <div class="form-group">
+                    <label for="fav-member">1. Who is your BINI bias (favorite member)?</label>
+                    <select id="fav-member" name="fav-member" required>
+                        <option value="" disabled selected>Select a Member</option>
+                        <option value="Aiah">Aiah</option>
+                        <option value="Colet">Colet</option>
+                        <option value="Maloi">Maloi</option>
+                        <option value="Gwen">Gwen</option>
+                        <option value="Stacey">Stacey</option>
+                        <option value="Mikha">Mikha</option>
+                        <option value="Jhoanna">Jhoanna</option>
+                        <option value="Sheena">Sheena</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">2. Where are you primarily located (City, Country)?</label>
+                    <input type="text" id="location" name="location" required placeholder="Ex: Cebu City, Philippines or Sydney, Australia">
+                </div>
+
+                <div class="form-group">
+                    <label>3. How did you first discover BINI?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="discovery" value="TikTok" required> TikTok (Viral Dance/Trend)</label>
+                        <label><input type="radio" name="discovery" value="SpotifyChart"> Spotify/Music Chart</label>
+                        <label><input type="radio" name="discovery" value="ConcertTV"> TV/Concert Performance</label>
+                        <label><input type="radio" name="discovery" value="FriendRecomm"> Friend/Family Recommendation</label>
+                        <label><input type="radio" name="discovery" value="PBB"> PBB/Star Hunt Academy days</label>
+                        <label><input type="radio" name="discovery" value="Other"> Other</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>4. Which BINI song is your current favorite?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="fav-song" value="Pantropiko" required onclick="toggleOtherSong(false)"> Pantropiko</label>
+                        <label><input type="radio" name="fav-song" value="Salamin" onclick="toggleOtherSong(false)"> Salamin, Salamin</label>
+                        <label><input type="radio" name="fav-song" value="Karera" onclick="toggleOtherSong(false)"> Karera</label>
+                        <label><input type="radio" name="fav-song" value="BornToWin" onclick="toggleOtherSong(false)"> Born to Win</label>
+                        <label><input type="radio" name="fav-song" value="Other" id="other-song-radio" onclick="toggleOtherSong(true)"> Other</label>
+                    </div>
+                    <div class="hidden-input" id="other-song-box">
+                        <label for="other-song-name">Please specify your favorite song:</label>
+                        <input type="text" id="other-song-name" name="other-song-name" placeholder="Enter song title here">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>5. Which BINI music videos have you watched?</label>
+                    <div class="checkbox-options">
+                        <label><input type="checkbox" name="watched-mv" value="Pantropiko"> Pantropiko MV</label>
+                        <label><input type="checkbox" name="watched-mv" value="Salamin"> Salamin, Salamin MV</label>
+                        <label><input type="checkbox" name="watched-mv" value="Karera"> Karera Performance Video</label>
+                        <label><input type="checkbox" name="watched-mv" value="Lumina"> Lumina MV</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>6. Which BINI concept/era do you prefer?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="fav-concept" value="SummerVibe" required> Summer/Fun (Pantropiko, Salamin)</label>
+                        <label><input type="radio" name="fav-concept" value="EdgyPop"> Edgy Pop (Born to Win, I Feel Good)</label>
+                        <label><input type="radio" name="fav-concept" value="Elegant"> Elegant/Formal (Awards Show Looks)</label>
+                        <label><input type="radio" name="fav-concept" value="Casual"> Casual/Girl-Next-Door</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>7. Where do you primarily follow BINI content?</label>
+                    <div class="checkbox-options">
+                        <label><input type="checkbox" name="social-media" value="TikTok"> TikTok</label>
+                        <label><input type="checkbox" name="social-media" value="YouTube"> YouTube</label>
+                        <label><input type="checkbox" name="social-media" value="X"> X (Twitter)</label>
+                        <label><input type="checkbox" name="social-media" value="Instagram"> Instagram</label>
+                        <label><input type="checkbox" name="social-media" value="Spotify"> Spotify/Music Streaming</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fandom-activity">8. Describe your most memorable BINI fan experience.</label>
+                    <textarea id="fandom-activity" name="fandom-activity" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-survey-button">SUBMIT SURVEY</button>
+            </form>
+
+        </div>
+    </main>
+
+    <div id="submission-modal" class="modal-overlay">
+        <div class="modal-content">
+            <i class="fas fa-heart fa-3x modal-icon"></i>
+            <h2 class="modal-title">THANK YOU, BLOOM!</h2>
+            <p class="modal-message">Your survey submission has been successfully recorded. Your support helps BINI fly higher!</p>
+            <p class="modal-message small-text">Mabuhay ang P-Pop at ang mga Filipina!</p>
+            <button class="modal-close-button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    <script>
+        // JS for Question 4 conditional input
+        function toggleOtherSong(show) {
+            const otherSongBox = document.getElementById('other-song-box');
+            const otherSongInput = document.getElementById('other-song-name');
+
+            if (show) {
+                // Use class manipulation for the hidden input visibility
+                otherSongBox.style.display = 'block'; 
+                otherSongInput.focus();
+                otherSongInput.setAttribute('required', 'required'); 
+            } else {
+                otherSongBox.style.display = 'none';
+                otherSongInput.removeAttribute('required');
+                otherSongInput.value = ''; 
+            }
+        }
+        
+        // JS for Modal functionality
+        const surveyForm = document.getElementById('surveyForm');
+        const modal = document.getElementById('submission-modal');
+
+        surveyForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the default form submission
+            
+            // Basic form validation (optional, as inputs already have 'required')
+            // This is crucial: checkValidity() ensures all 'required' fields are filled before submitting.
+            if (surveyForm.checkValidity()) {
+                modal.style.display = 'flex'; // Show the modal (now works due to CSS)
+                surveyForm.reset(); // Clear the form fields
+                toggleOtherSong(false); // Ensure the conditional box is hidden after reset
+            } else {
+                // If validation fails, the browser's default messages will show.
+                console.log("Form validation failed. Showing browser warnings.");
+            }
+        });
+
+        function closeModal() {
+            modal.style.display = 'none'; // Hide the modal
+        }
+
+        // Initialize the conditional box as hidden on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Re-apply display none in case initial state was incorrect
+            document.getElementById('other-song-box').style.display = 'none';
+        });
+    </script>
+</body>
+
+<footer>
+    <p>Copyright &copy; 2025 Binitopia. All rights reserved.</p>
+</footer>
+
+</html>

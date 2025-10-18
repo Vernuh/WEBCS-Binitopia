@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="img/android-chrome-192x192.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>BINItopia</title>
+    
+</head>
+<body class="feedback-body">
+    <header class="navbar">
+
+        <a href="index.html"> 
+            <img src="img/binitopia_logo.png" alt="Binitopis Logo" style="height: 150px;"> <!-- Logo -->
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="feedback-page">
+        
+        <div class="feedback-box">
+            
+            <div id="feedback-content">
+                <h1 class="page-title">FEEDBACK</h1>
+                <p class="tagline">We value your opinion.</p>
+
+                <form class="feedback-form" id="feedback-form">
+                    
+                    <div class="rating-section">
+                        <label for="rating">How would you rate your overall experience?</label>
+                        <div class="star-rating">
+                            <!-- Star icons from Font Awesome. Note: I will use fas for filled and far for outlined icons in JS. -->
+                            <i class="far fa-star" data-value="1"></i>
+                            <i class="far fa-star" data-value="2"></i>
+                            <i class="far fa-star" data-value="3"></i>
+                            <i class="far fa-star" data-value="4"></i>
+                            <i class="far fa-star" data-value="5"></i>
+                            <input type="hidden" name="rating" id="rating" value="0">
+                        </div>
+                    </div>
+
+                    <div class="comment-section">
+                        <label for="comment">Kindly take a moment to tell us what you think</label>
+                        <textarea id="comment" name="comment" rows="5" placeholder="Tell us what you loved and how we can improve..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">SUBMIT</button>
+                </form>
+            </div>
+
+            <div id="thank-you-message" style="display:none; text-align: center;">
+                <h1>Thank You! 🎉</h1>
+                <p>Your feedback has been successfully submitted. We appreciate your input!</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const stars = document.querySelectorAll('.star-rating i');
+        const ratingInput = document.getElementById('rating');
+        const feedbackForm = document.getElementById('feedback-form');
+        const feedbackContent = document.getElementById('feedback-content');
+        const thankYouMessage = document.getElementById('thank-you-message');
+
+        let currentRating = 0;
+
+        // --- Star Rating Interaction ---
+
+        // Function to set the visual state of the stars
+        const setRating = (rating) => {
+            currentRating = rating;
+            ratingInput.value = rating;
+
+            stars.forEach((star, index) => {
+                const isFilled = index < rating;
+                star.classList.toggle('fas', isFilled); // Solid star
+                star.classList.toggle('far', !isFilled); // Outlined star
+                star.classList.remove('hovered');
+            });
+        };
+
+        // Handle star hover effect (temporary visual update)
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const hoverValue = parseInt(star.dataset.value);
+                stars.forEach((s, index) => {
+                    s.classList.toggle('fas', index < hoverValue);
+                    s.classList.toggle('far', index >= hoverValue);
+                });
+            });
+
+            // Handle mouse leaving the star area (revert to current rating)
+            star.addEventListener('mouseout', () => {
+                setRating(currentRating);
+            });
+
+            // Handle star click (permanent update)
+            star.addEventListener('click', () => {
+                const clickValue = parseInt(star.dataset.value);
+                setRating(clickValue);
+            });
+        });
+
+        // --- Form Submission ---
+
+        feedbackForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Simple validation check for rating (optional, but good practice)
+            if (currentRating === 0) {
+                 console.error("Please select a star rating before submitting.");
+                 // In a real app, this would show an error message on the screen, but we avoid alert()
+                 return;
+            }
+            
+            const comment = document.getElementById('comment').value;
+
+            // In a real application, you would send the data to a server/database here.
+            const feedbackData = {
+                rating: currentRating,
+                comment: comment,
+                timestamp: new Date().toISOString()
+            };
+
+            // Log data to console for demonstration
+            console.log('Feedback Submitted:', feedbackData);
+
+            // Show the Thank You Message
+            feedbackContent.style.display = 'none';
+            thankYouMessage.style.display = 'block';
+
+            // Optional: Reset form after a few seconds if you wanted to allow another submission
+            // setTimeout(() => {
+            //     setRating(0);
+            //     feedbackForm.reset();
+            //     feedbackContent.style.display = 'block';
+            //     thankYouMessage.style.display = 'none';
+            // }, 5000);
+        });
+    </script>
+</body>
+</body>
+
+<footer>
+    <p>Copyright &copy; 2025 Binitopia. All rights reserved.</p>
+</footer>
+
+</html>
+

@@ -1,0 +1,612 @@
+:root {
+    --primary-pink: #FF86C3; /* A vibrant pink */
+    --secondary-blue: #41C6CD; /* A bright cyan/blue */
+    --white: #FFFFFF;
+}
+
+body, header, nav, main, footer, h1, div, img, ul, section, li, a, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #81cdc6; 
+    color: #333;
+    line-height: 1.6;
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -------------------- Main Content Wrapper -------------------- */
+main {
+    max-width: 1000px; 
+    margin: 5px auto;
+    padding: 20px;
+    background-color: #fff;
+    flex-grow: 1; 
+    position: relative; 
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    background-color: var(--primary-pink); /* Pink background */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 50px; 
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: var(--secondary-blue); 
+}
+
+/* Member Name Title */
+.member-name-title {
+    font-size: 3.5em; 
+    font-weight: 900;
+    color: #00c0ff; /* Teal/blue color */
+    text-align: right; 
+    letter-spacing: 2px;
+    margin-top: -30px; 
+    margin-bottom: 5px;
+    text-shadow: 
+        -1px -1px 0 #333,  
+         1px -1px 0 #333,
+        -1px  1px 0 #333,
+         1px  1px 0 #333; /* Black outline */
+}
+
+/* Title Separator */
+.title-separator {
+    border: none;
+    border-top: 3px solid #ff3366; /* Pink horizontal line */
+    width: 25%; 
+    margin: 0 0 40px auto; 
+}
+
+/* -------------------- Profile Content Section (Two Columns) -------------------- */
+.profile-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; 
+}
+
+.profile-image-section {
+    flex: 1; 
+    min-width: 300px; 
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; 
+    border: none; 
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+}
+
+.main-profile-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.profile-details-section {
+    flex: 2; 
+    min-width: 400px; 
+}
+
+.details-group {
+    background-color: #f7f7f7; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 5px solid #00c0ff; 
+}
+
+.details-group p {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.label {
+    font-weight: 700;
+    color: #ff3366; /* Pink color for labels */
+    margin-right: 5px;
+}
+
+/* Specific Label Colors (Matching Image) */
+.profile-details-section .details-group p:nth-child(3) .label, /* Born */
+.profile-details-section .details-group p:nth-child(4) .label { /* Birthplace */
+    color: #ff3366; /* Pink */
+}
+.profile-details-section .details-group p:nth-child(5) .label { /* Education */
+    color: #9a1a9a; /* Purple/Magenta */
+}
+.profile-details-section .details-group p:nth-child(6) .label { /* Family */
+    color: #e6b800; /* Yellow/Gold */
+}
+
+
+/* Section Headings */
+.section-heading {
+    font-size: 1.6em;
+    font-weight: 800;
+    color: #008080; /* Darker teal color */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffe066; /* Yellow underline */
+    padding-bottom: 5px;
+}
+
+/* List Styling */
+ul {
+    list-style: disc; 
+    margin-left: 25px;
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+ul ul {
+    list-style: circle; 
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+/* -------------------- Additional Details Section (Text column that contains the floating image) -------------------- */
+.additional-details {
+    /* Set up a container for the floating element */
+    position: relative; 
+    /* This makes sure the parent contains the floated child */
+    overflow: auto; 
+    padding-bottom: 30px; 
+}
+
+.additional-details .content {
+    font-weight: 600;
+    color: #333;
+}
+
+.additional-details p {
+    margin-left: 25px; 
+    margin-bottom: 10px;
+}
+
+/* --- MODIFIED: Second Image Section (Floated within .additional-details) --- */
+.second-image-section {
+    width: 35%; /* Adjusted width to fit proportionally */
+    float: right;
+    margin: 0 0 20px 30px; /* Top, Right, Bottom, Left margin for spacing around text */
+    border: 3px solid #ff3366; /* Pink border */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Adding a min-width to prevent the image from becoming too small on smaller screens before stacking */
+    min-width: 150px; 
+}
+
+.second-profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Ensure the quotation section starts below all floated content */
+.quotation-section {
+    clear: both; /* Ensures it's below the floating image and text column */
+    background-color: #ffe066; 
+    padding: 40px;
+    text-align: center;
+    font-style: italic;
+    margin: 40px -20px; /* Extend full width by negating main's padding */
+    border-top: 5px solid #ff3366; 
+    border-bottom: 5px solid #ff3366; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+/* Social Media Section */
+.social-media-section {
+    margin-top: 40px; 
+    margin-bottom: 40px;
+}
+
+.social-media-section p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    margin-left: 25px; 
+}
+
+header {
+    top: 0;
+    background-color: #fff;
+    height: 150px;
+}
+
+header img {
+    height: 154px;
+    margin-top: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo left, nav right */
+    align-items: center;
+    padding: 15px 40px; 
+    background-color: var(--white);
+    position: relative; /* Needed for the bottom line positioning */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+nav ul li a {
+    color: var(--primary-pink); 
+    text-decoration: none;
+    font-size: 1.4em; 
+    font-weight: bold; 
+    font-family: "Montserrat", sans-serif; 
+    position: relative;
+    transition: 
+        color 0.3s ease, 
+        transform 0.3s ease, 
+        text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+nav ul li a:hover {
+    color: var(--secondary-blue); /* Teal color */
+    transform: scale(1.08);       /* Slight pop-out */
+    text-shadow: 0 4px 10px rgba(65, 198, 205, 0.4); /* Glow-y depth */
+}
+
+.navbar-bottom-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-blue);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Custom styles for the gradient background and active heart color */
+.gallery-body {
+    background: linear-gradient(180deg, #fce9f1 0%, #ffffff 100%);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+.gallery-title {
+    font-family: "alfa slab one", sans-serif; 
+    padding-top: 60px;
+    text-shadow: 3px 3px 0px #ffb3d9, 5px 5px 0px #ff80c0;
+    color: #c2f8ed;
+    letter-spacing: 0.1em;
+}
+.back-link {
+    color: #ff54a6; /* Bright pink for the link */
+    transition: color 0.2s;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.back-link:hover {
+    color: #c90060;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem; /* Rounded corners */
+}
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Ensure images are square */
+    transition: opacity 0.3s;
+}
+.like-icon {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.like-icon i {
+    color: #a0a0a0; /* Default gray for unliked */
+    font-size: 1.25rem;
+    transition: color 0.2s, transform 0.2s;
+}
+.liked i {
+    color: #ff007f !important; /* Vibrant pink for liked */
+    transform: scale(1.1);
+}
+
+/* Modal specific styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    object-fit: contain;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    border-radius: 0.5rem;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+footer {
+    background-color: var(--secondary-blue); 
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    margin-top: auto; 
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE DESIGN SECTION  */
+/* ============================= */
+
+/* --- Tablets (Portrait & Landscape) --- */
+@media (max-width: 1024px) {
+    main {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .member-name-title {
+        font-size: 2.8em;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .title-separator {
+        margin: 20px auto 30px auto;
+        width: 40%;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-details-section {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .profile-image-section {
+        min-width: unset;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .second-image-section {
+        float: none;
+        width: 60%;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+}
+
+/* --- Phones (Portrait) --- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header img {
+        height: 100px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .member-name-title {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .title-separator {
+        width: 50%;
+        margin: 10px auto 20px auto;
+    }
+
+    .profile-content {
+        gap: 20px;
+    }
+
+    .image-wrapper {
+        padding-bottom: 130%; /* Slightly taller for narrow screens */
+    }
+
+    .profile-details-section {
+        padding: 0;
+    }
+
+    .details-group {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .section-heading {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .second-image-section {
+        width: 80%;
+        margin: 0 auto 20px auto;
+        float: none;
+    }
+
+    .quotation-section {
+        padding: 20px;
+        margin: 20px -10px;
+    }
+
+    .quote {
+        font-size: 1.1em;
+    }
+
+    .social-media-section p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+}
+
+/* ============================= */
+/* 🖨️ PRINT STYLES              */
+/* ============================= */
+@media print {
+    /* Hide all images */
+    img, 
+    .image-wrapper, 
+    .second-image-section, 
+    .gallery-item img {
+        display: none !important;
+    }
+
+    /* Optional: simplify layout for printing */
+    header, nav, footer, .navbar, .back-link, .like-icon, .modal {
+        display: none !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    main {
+        max-width: 100%;
+        box-shadow: none;
+        background: #fff;
+        padding: 0;
+    }
+
+    .profile-content, 
+    .additional-details, 
+    .quotation-section {
+        width: 100%;
+        float: none;
+    }
+
+    .quotation-section {
+        background: none;
+        border: none;
+        box-shadow: none;
+        margin: 20px 0;
+        padding: 0;
+    }
+}

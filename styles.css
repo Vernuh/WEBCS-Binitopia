@@ -1,0 +1,2796 @@
+:root {
+    --primary-pink: #FF86C3; /* A vibrant pink */
+    --secondary-blue: #41C6CD; /* A bright cyan/blue */
+    --white: #FFFFFF;
+    --light-purple: #e0b0ff; 
+    --light-blue-bg: #e0f8ff;
+    --dark-space: #1a1a2e;
+    --text-color: #333333;
+    --light-gray: #f9f9f9;
+    --call-to-action-yellow: #FFD93D;
+    --table-header-bg: var(--primary-pink); /* Pink for table header */
+    --table-row-even: #f5f5f5; /* Light gray for even rows */
+    --table-border-color: #e0e0e0; /* Light border color */
+    --grey-bg: #1a1a1a;
+    --text-color-light: #f5f5f5; 
+    --dark: #000000;
+    --title-cyan: #4DC2C5; /* Teal/Cyan color for title and button */
+    --form-pink: #FF86C3; /* Bright Pink for the form background */
+    --text-white: #FFFFFF;
+    --box-gray: rgba(0, 0, 0, 0.5); /* Semi-transparent background for card */
+    --input-background: #F0F0F0; /* Light background for inputs */
+    --input-border: #D1D5DB; /* Light border for inputs */
+    --title-font: 'Alfa Slab One', 'Archivo Black', sans-serif;
+    --body-font: 'Inter', sans-serif;
+}
+
+body, header, nav, main, footer, h1, div, img, ul, section, li, a, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+    background-color: aliceblue;
+}
+
+header {
+    top: 0;
+    background-color: #fff;
+    height: 150px;
+}
+
+header img {
+    height: 154px;
+    margin-top: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo left, nav right */
+    align-items: center;
+    padding: 15px 40px; 
+    background-color: var(--white);
+    position: relative; /* Needed for the bottom line positioning */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+nav ul li a {
+    color: var(--primary-pink); 
+    text-decoration: none;
+    font-size: 1.4em; 
+    font-weight: bold; 
+    font-family: "Montserrat", sans-serif; 
+    position: relative;
+    transition: 
+        color 0.3s ease, 
+        transform 0.3s ease, 
+        text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+nav ul li a:hover {
+    color: var(--secondary-blue); /* Teal color */
+    transform: scale(1.08);       /* Slight pop-out */
+    text-shadow: 0 4px 10px rgba(65, 198, 205, 0.4); /* Glow-y depth */
+}
+
+.navbar-bottom-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-blue);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-banner {
+    background-image: url("img/index_heroimage.jfif");
+    background-size: cover;
+    background-position: center;
+    height: 960px;  
+ }
+
+.hero-banner .hero-content {
+    text-align: center;
+    color: var(--white);
+ }
+
+.hero-banner .hero-content h1 {
+    font-family: "Alfa Slab One", serif;
+    font-style: normal;
+    font-size: 4em;
+    margin-bottom: 20px;
+    padding-top: 45px;
+    position: relative;
+    color: var(--white);
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7), 
+        -1px -1px 0 rgba(0, 0, 0, 0.7),
+        0 0 4px rgba(0, 0, 0, 0.9), 
+        0 0 10px rgba(255, 153, 0, 0.6);
+}
+
+.hero-banner .hero-content .group-name {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 8em;
+    padding-top: 4.9em;
+    color: var(--white);
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7), 
+        -1px -1px 0 rgba(0, 0, 0, 0.7),
+        0 0 4px rgba(0, 0, 0, 0.9), 
+        0 0 10px rgba(255, 153, 0, 0.6);
+}
+
+/* --- Group Intro Section --- */
+
+.group-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 60px 80px;
+    position: relative;
+    background: linear-gradient(to right, var(--primary-pink) 0%, var(--light-purple) 100%);
+    overflow: hidden;
+    margin: 50px auto;
+    max-width: 1400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-image: url('img/index_groupimage1.jfif');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-left: 10%;
+    border-radius: 2%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.text-right {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    z-index: 2;
+}
+
+.text-right .nations-group {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: clamp(2.5em, 5vw, 6em);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    position: relative;
+    display: inline-block;
+    text-shadow:
+        1px 1px 1px rgba(0, 0, 0, 0.2),
+        -1px -1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.description-area {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    padding-top: 40px;
+    text-align: center;
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.description-area p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-size: 1.2em;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* ✨ Added shadow */
+}
+
+.container {
+    padding: 0; 
+    max-width: none; 
+    margin: 0 auto; 
+}
+
+/* --- Member Profiles Section Container --- */
+.member-profiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: var(--white);
+    justify-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Member Card Link Wrapper --- */
+.member-profiles a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    max-width: 280px;
+}
+
+/* --- Individual Member Card Styling --- */
+.member-card {
+    position: relative;
+    width: 100%;
+    padding-bottom: 130%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Background Image Overlays (The colored frames) --- */
+.member-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Specific Card Background Images */
+.member-profiles a:nth-child(1) .member-card { background-image: url('img/index_aiah.webp'); }
+.member-profiles a:nth-child(2) .member-card { background-image: url('img/index_colet.webp'); }
+.member-profiles a:nth-child(3) .member-card { background-image: url('img/index_maloi.webp'); }
+.member-profiles a:nth-child(4) .member-card { background-image: url('img/index_gwen.webp'); }
+.member-profiles a:nth-child(5) .member-card { background-image: url('img/index_stacey.webp'); }
+.member-profiles a:nth-child(6) .member-card { background-image: url('img/index_mikha.webp'); }
+.member-profiles a:nth-child(7) .member-card { background-image: url('img/index_jhoanna.webp'); }
+.member-profiles a:nth-child(8) .member-card { background-image: url('img/index_sheena.webp'); }
+
+/* --- Member Name Text Styling (Assuming they all use the common class) --- */
+.member-card > div { 
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Learn More Button --- */
+.learn-more {
+    grid-column: 1 / span 4; 
+    justify-self: center;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 134, 195, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #ff52a4;
+    box-shadow: 0 8px 20px rgba(255, 134, 195, 0.8);
+}
+
+/* --- Section Container (The Dark Background) --- */
+.header-banner {
+    width: 100%;
+    min-height: 500px; 
+    background-image: url('img/about_heroimage.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--dark-space);
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; 
+}
+
+/* Optional: Add a subtle dark overlay to enhance the contrast of the title */
+.header-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+
+/* --- Content Alignment (Title and Image Collage) --- */
+.banner-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+/* --- Banner Title Styling --- */
+.banner-title {
+    color: var(--white);
+    font-family: 'Alfa Slab One', sans-serif; 
+    font-size: clamp(3em, 8vw, 6em); 
+    letter-spacing: 0.05em;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 
+        5px 5px 10px rgba(0, 0, 0, 0.7), 
+        0 0 10px var(--primary-pink); 
+    flex: 0 0 40%;
+}
+
+/* --- Image Collage Styling (The members) --- */
+.banner-image {
+    display: block;
+    height: auto;
+    max-height: 450px;
+    width: auto;
+    flex: 0 1 60%;
+    border-radius: 0; 
+}
+
+/* --- Section Container --- */
+.about-us-section {
+    padding: 80px 60px; /* Padding around the entire section */
+    max-width: 1400px; /* Limit width and center */
+    margin: 0 auto;
+    background-color: var(--white); /* Assuming a white background for the section */
+}
+
+/* --- Section Title Styling --- */
+.section-title {
+    /* Use a heavy, blocky font similar to the image */
+    font-family: 'Arial Black', sans-serif; 
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 20px; /* Space below the title */
+    /* REMOVED: Specific color definition, assuming the next class handles it */
+}
+
+.teal-title {
+    color: var(--secondary-blue); /* The distinct teal/cyan color */
+    /* Add a subtle drop shadow to match the slightly raised look */
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5), 
+                 -1px -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* --- Content Wrapper (Text and Image) --- */
+.about-content {
+    display: flex;
+    /* justify-content: space-between;  */
+    align-items: flex-start;
+    gap: 10em;
+}
+
+/* --- Text Styling --- */
+.about-text {
+    flex: 1; /* Allow the text area to grow and take space */
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 600px; /* Max width for readability */
+    padding-top: 20px; /* Push the text down slightly to align with the image top */
+    padding-left: 90px;
+    margin-right: 0; /* Space between text and image */
+}
+
+/* --- Image Styling --- */
+.about-image {
+    flex: 0 0 auto; /* Prevent the image from shrinking */
+    max-width: 450px; /* Control the maximum size of the image */
+    height: auto;
+    display: block;
+    border-radius: 20px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); 
+    margin-left: 0;
+}
+
+/* --- Global Section Padding --- */
+.history-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 40px 80px; /* Top, sides, bottom padding */
+    background-color: var(--white);
+    font-family: Arial, sans-serif; /* Consistent body font */
+}
+
+/* --- Section Title Banner (HISTORY OF BINI) --- */
+.history-banner {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Define a fixed height for the banner area */
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-radius: 20px; /* Subtle rounding for the image/banner area */
+}
+
+.history-image-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Move the image up slightly to show the faces better */
+    object-position: center 20%; 
+}
+
+.history-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    
+    /* Font Styling - Large, pink, shadowed, blocky */
+    font-family: 'Alfa Slab One', sans-serif; 
+
+    font-size: clamp(3em, 6vw, 4.5em); 
+    color: var(--primary-pink);
+    text-transform: uppercase;
+    text-align: center;
+    
+    /* Text Shadow for 3D/Embossed Look */
+    text-shadow: 
+        1px 1px 0 var(--white), 
+        -1px -1px 0 var(--white),
+        3px 3px 5px rgba(0, 0, 0, 0.4); 
+}
+
+/* --- Sub-Section Titles (Formation, Pre-Debut, Debut) --- */
+.subsection-title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.teal-title {
+    color: var(--secondary-blue);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5), 
+                 -1px -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.blue-title {
+    /* Use a slightly darker blue or the same for consistency */
+    color: var(--secondary-blue); 
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5), 
+                 -1px -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* --- Alternating Info Blocks (Formation, Pre-Debut, Debut) --- */
+.info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 30px 0;
+}
+
+/* Reverse the order for the alternating image/text layout (Pre-Debut Activities) */
+.info-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content p {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.block-image {
+    flex-shrink: 0; /* Prevents image from shrinking */
+    width: 450px; /* Fixed width for the image column */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Current Status Block (Unique Layout) --- */
+.current-status-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 30px 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.status-text {
+    flex: 1; /* Allow text to take up space */
+}
+
+.status-text p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.status-image-wrapper {
+    flex-shrink: 0;
+    width: 450px; /* Fixed width to match other images */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.status-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Adjust object-fit if the image needs to fill the container differently */
+    object-fit: cover; 
+}
+
+.call-to-action-bar {
+    background-color: var(--call-to-action-yellow);
+    margin: 0 auto;
+    padding: 30px 40px;
+    width: 100%;
+    box-sizing: border-box; 
+    text-align: center;
+    color: var(--text-color); 
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-to-action-bar p {
+    font-family: "Montserrat", sans-serif;
+    margin: 0; 
+    max-width: 900px; 
+}
+
+/* --- Global Section Padding (Reusing from History Section) --- */
+.achievements-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 60px 80px;
+    background-color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+/* --- Achievements Banner (Consistent with History Banner) --- */
+.achievements-banner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.achievements-image-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Adjust object-position for the mountain photo */
+    object-position: center 40%; 
+}
+
+.achievements-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    
+    /* Font Styling - Large, pink, shadowed, blocky (using established styles) */
+    font-family: 'Alfa Slab One', sans-serif; 
+    font-size: clamp(3em, 6vw, 4.5em); 
+    color: var(--primary-pink);
+    text-transform: uppercase;
+    text-align: center;
+    
+    /* Text Shadow for 3D/Embossed Look */
+    text-shadow: 
+        1px 1px 0 var(--white), 
+        -1px -1px 0 var(--white),
+        3px 3px 5px rgba(0, 0, 0, 0.4); 
+}
+
+/* --- Subsection Title Styles --- */
+.subsection-title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.teal-title {
+    color: var(--secondary-blue);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5), 
+                 -1px -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.yellow-title {
+    color: var(--call-to-action-yellow); /* Using the same yellow as the CTA bar */
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5), 
+                 -1px -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure full-width titles span the entire container in a grid layout */
+.full-width {
+    grid-column: 1 / -1;
+    text-align: center; /* Center the "Music and streaming records" title */
+}
+
+/* --- Concert and Touring Milestones Block (Custom Layout) --- */
+.info-block {
+    display: grid;
+    /* Define 3 columns for this section: Image | Image | Text */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+/* Reverse layout for the streaming section later */
+.info-block.reverse {
+    display: flex; 
+    flex-direction: column; 
+    gap: 40px; 
+    margin-bottom: 60px;
+}
+.info-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Position the two concert images in the first two columns */
+.info-block > .block-image:nth-child(1) {
+    grid-column: 1 / 2;
+    margin-bottom: 10px; /* Space between the two stacked images */
+}
+
+.info-block > .block-image:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3; /* Stack the second image below the first in column 1 */
+}
+
+/* Position the text content in the third column */
+.info-block > .text-content {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    padding-top: 10px;
+}
+
+.info-block p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+
+/* --- Music and Streaming Records (Grid of Cards) --- */
+.text-block-group {
+    display: flex;
+    flex-direction: column; 
+    gap: 40px; 
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px; 
+}
+
+.record-card {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    
+    /* ADJUSTED: Reduced gap between image and text */
+    gap: 30px; 
+    
+    padding: 0;
+    background-color: transparent;
+}
+
+.record-image {
+    /* ADJUSTED: Made the image smaller */
+    width: 180px; 
+    height: auto;
+    flex-shrink: 0; 
+    
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    object-fit: contain; 
+}
+
+/* --- Text Details Styling --- */
+.record-details {
+    flex: 1; 
+    padding-top: 5px; 
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+}
+
+.record-title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8em;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.yellow-title {
+    color: var(--call-to-action-yellow);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.record-details p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 5px 0 20px 0;
+}
+
+.record-details ul {
+    list-style-type: disc; 
+    padding-left: 20px;
+    margin: 0;
+    list-style-position: outside;
+}
+
+.record-details ul li {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+/* --- Section Container --- */
+.awards-table-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 0 80px; /* Adjust top/bottom padding */
+    background-color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+/* --- Awards Banner (Consistent with previous banners) --- */
+.awards-banner {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Fixed height for the banner */
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-radius: 20px; /* Rounded corners for the banner */
+}
+
+.awards-image-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center 45%; /* Adjust to frame BINI members well */
+}
+
+.awards-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    
+    font-family: 'Alfa Slab One', sans-serif; 
+    font-size: clamp(3em, 6vw, 4.5em); 
+    color: var(--primary-pink);
+    text-transform: uppercase;
+    text-align: center;
+    
+    text-shadow: 
+        1px 1px 0 var(--white), 
+        -1px -1px 0 var(--white),
+        3px 3px 5px rgba(0, 0, 0, 0.4); 
+}
+
+/* --- Awards Header Container --- */
+.awards-header {
+    text-align: center;
+    margin: 40px auto; /* Slightly less margin for smaller appearance */
+    padding: 0 40px;
+    max-width: 1400px;
+    box-sizing: border-box;
+}
+
+/* --- H2 Title Styling (Made smaller) --- */
+.awards-header h2 {
+    font-family: 'Arial Black', sans-serif;
+    /* REDUCED FONT SIZE: Adjusting from 4.5em max to 3.5em max */
+    font-size: clamp(2em, 5vw, 3.5em); 
+    font-weight: 900;
+    line-height: 1.1; 
+    text-transform: uppercase;
+    color: var(--secondary-blue);
+    margin: 0;
+
+    /* Scaled-down Text Shadow for a smaller title */
+    text-shadow: 
+        3px 3px 0 var(--white),      /* White outline/emboss */
+        -3px -3px 0 var(--white),
+        0 0 8px rgba(0, 0, 0, 0.2),  /* Inner glow */
+        6px 6px 12px rgba(0, 0, 0, 0.4); /* Drop shadow */
+    
+    display: inline-block;
+}
+
+/* --- Table Wrapper for Responsiveness --- */
+.awards-table-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling for the table on small screens */
+    margin: 0 20px; /* Padding on sides for the table wrapper */
+    border-radius: 15px; /* Rounded corners for the entire table container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table block */
+}
+
+/* --- Table Styling --- */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders for a clean look */
+    min-width: 800px; /* Ensure table doesn't get too narrow on smaller screens */
+    background-color: var(--white);
+}
+
+/* Table Header */
+thead {
+    background-color: var(--table-header-bg);
+}
+
+th {
+    color: var(--white);
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center; /* Center header text */
+    padding: 15px 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Rounded corners for the top of the table header */
+thead tr:first-child th:first-child {
+    border-top-left-radius: 15px;
+}
+thead tr:first-child th:last-child {
+    border-top-right-radius: 15px;
+}
+
+
+/* Table Body Cells */
+td {
+    padding: 12px 10px;
+    text-align: center; /* Center cell content */
+    font-size: 0.95em;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--table-border-color); /* Horizontal cell borders */
+    border-right: 1px solid var(--table-border-color); /* Vertical cell borders */
+}
+
+/* Remove right border from last column */
+td:last-child {
+    border-right: none;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: var(--table-row-even); /* Light gray for even rows */
+}
+
+tbody tr:hover {
+    background-color: #eaf7ff; /* Subtle hover effect */
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Section Container --- */
+.awards-gallery-section {
+    max-width: 1400px;
+    margin: 40px auto 80px;
+    padding: 40px 40px;
+    background-color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+/* --- Gallery Grid (Two Columns) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; 
+    object-fit: cover;
+    display: block;
+    
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Final Statement Bar (Yellow Banner) --- */
+.final-statement-bar {
+    background-color: var(--call-to-action-yellow);
+    padding: 40px 60px;
+    margin-bottom: 60px;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.final-statement-bar p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0 auto;
+    max-width: 900px; 
+}
+
+/* --- Back to Top Button --- */
+.back-to-top-button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    
+    text-decoration: none;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Arial Black", sans-serif;
+    
+    padding: 12px 30px;
+    border-radius: 30px;
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 134, 195, 0.5);
+}
+
+.back-to-top-button:hover {
+    background-color: #ff52a4; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 134, 195, 0.7);
+}
+
+/* --- Main Section Container --- */
+.intro-banner {
+    width: 100%;
+    height: 800px;
+    /* No explicit height here, content will define it */
+    background-color: var(--call-to-action-yellow); /* Yellow background for the whole section */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure nothing spills out */
+}
+
+/* --- Title Styling --- */
+.intro-banner .banner-text {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: clamp(2em, 5.5vw, 4em); /* ✨ slightly smaller */
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px 20px; 
+    text-shadow: 
+        4px 4px 0 rgba(0, 0, 0, 0.4),
+        -4px -4px 0 rgba(0, 0, 0, 0.4),
+        0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    max-width: 1400px;
+    box-sizing: border-box;
+    display: block;
+}
+
+
+/* --- Image Container --- */
+.intro-banner .banner-image {
+    width: 100%;
+    margin-bottom: 0; 
+}
+
+.intro-banner .banner-image img {
+    display: block; 
+    width: 100%;
+    height: 1060px;
+    object-fit: cover; /* Ensures the image fills the 550px height without distortion */
+    border-radius: 0; 
+}
+
+.discography-container {
+    padding: 60px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+/* --- Section Title (STUDIO ALBUMS) --- */
+.section-title {
+    /* Styles for "STUDIO ALBUMS" title block (based on existing design language) */
+    font-family: 'Arial Black', sans-serif; 
+    font-size: clamp(2em, 5vw, 4em);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    
+    /* Yellow color with shadow from other titles */
+    color: var(--call-to-action-yellow);
+    text-shadow: 
+        1px 1px 0 var(--white), 
+        -1px -1px 0 var(--white),
+        3px 3px 5px rgba(0, 0, 0, 0.3);
+        
+    margin-top: 60px; /* Space above the title */
+    margin-bottom: 40px; /* Space below the title */
+    padding: 0 20px;
+}
+
+
+/* --- Album Row Container (Born to Win) --- */
+.album-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    gap: 40px;
+    max-width: 1200px; /* Max width for the content area */
+    margin: 40px auto; /* Center the row */
+    padding: 0 20px;
+}
+
+/* --- Album Cover Image --- */
+.album-row .album-cover {
+    flex-shrink: 0; /* Prevents the cover from shrinking */
+    width: 300px;
+    height: 300px;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+/* --- Song List Container --- */
+.album-row .song-list {
+    flex-grow: 1; /* Allows the list to take remaining space */
+    max-width: 500px; /* Limit the width of the song list text */
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+}
+
+/* --- Album Subtitle (e.g., "Born To Win") --- */
+.album-row .song-list h3 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8em;
+    color: var(--primary-pink); /* Pink title color */
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* --- Ordered List Styling --- */
+.album-row .song-list ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.album-row .song-list li {
+    font-size: 1.05em;
+    margin-bottom: 8px; /* Spacing between list items */
+    padding: 3px 5px; /* Padding for hover effect */
+    transition: background-color 0.2s ease;
+}
+
+/* --- List Item Links --- */
+.album-row .song-list li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block; /* Makes the entire list item area clickable/hoverable */
+    padding: 2px 0;
+}
+
+/* --- HOVER EFFECT --- */
+.album-row .song-list li:hover {
+    /* Background color change on hover */
+    background-color: rgba(255, 134, 195, 0.1); /* Very light pink background */
+    cursor: pointer;
+}
+
+.album-row .song-list li a:hover {
+    /* Text color change on hover */
+    color: var(--primary-pink); /* Pink text color on hover */
+    text-decoration: underline;
+}
+
+/* --- EP Section Container --- */
+.ep-section {
+    max-width: 1400px; /* Aligns with other sections */
+    margin: 80px auto; /* Space above and below the entire EP section */
+    padding: 0 40px;
+    background-color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+/* --- Section Title (EXTENDED PLAYS) --- */
+/* Re-using the .section-title style defined for STUDIO ALBUMS */
+.ep-section .section-title {
+    font-family: 'Arial Black', sans-serif; 
+    font-size: clamp(2em, 5vw, 4em);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    
+    color: var(--call-to-action-yellow);
+    text-shadow: 
+        1px 1px 0 var(--white), 
+        -1px -1px 0 var(--white),
+        3px 3px 5px rgba(0, 0, 0, 0.3);
+        
+    margin-top: 0; /* Already accounted for by ep-section margin */
+    margin-bottom: 40px; 
+    padding: 0 20px;
+}
+
+/* --- EP Row (for Talaarawan and BINIverse) --- */
+.ep-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    gap: 40px; /* Space between cover and song list */
+    max-width: 1200px; /* Max width for the content area */
+    margin: 60px auto; /* Space between EP rows */
+    padding: 0 20px;
+}
+
+/* --- Image and Song List Content Wrapper --- */
+.ep-row .ep-content {
+    flex-grow: 1; /* Allows the content (song list) to take remaining space */
+    max-width: 500px; /* Limit the width of the song list text */
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+}
+
+/* --- EP Cover Image --- */
+.ep-row .ep-cover {
+    flex-shrink: 0; /* Prevents the cover from shrinking */
+    width: 300px;
+    height: 300px;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+/* --- Song List Styling (Re-using styles from Studio Albums) --- */
+.ep-row .song-list h3 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8em;
+    color: var(--primary-pink); /* Pink title color */
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ep-row .song-list ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.ep-row .song-list li {
+    font-size: 1.05em;
+    margin-bottom: 8px; /* Spacing between list items */
+    padding: 3px 5px; /* Padding for hover effect */
+    transition: background-color 0.2s ease;
+}
+
+.ep-row .song-list li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block; /* Makes the entire list item area clickable/hoverable */
+    padding: 2px 0;
+}
+
+/* --- HOVER EFFECT FOR SONG LIST ITEMS --- */
+.ep-row .song-list li:hover {
+    background-color: rgba(255, 134, 195, 0.1); /* Very light pink background */
+    cursor: pointer;
+}
+
+.ep-row .song-list li a:hover {
+    color: var(--primary-pink); /* Pink text color on hover */
+    text-decoration: underline;
+}
+
+/* --- Specific Layout for Talaarawan (Image on right, song list on left) --- */
+/* The HTML for Talaarawan already has the song-list first, then ep-cover, 
+   so the default flex-direction: row works for image on right. */
+.ep-row:nth-child(2) { /* Targets the first 'ep-row' after the title (Talaarawan) */
+    flex-direction: row-reverse; /* Puts image on the right */
+}
+
+/* --- Singles Section Container --- */
+.singles-section {
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+/* --- Section Title (SINGLES) --- */
+.singles-section .section-title {
+    font-family: 'Arial Black', sans-serif; 
+    font-size: clamp(2em, 5vw, 4em);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    
+    color: var(--call-to-action-yellow);
+    text-shadow: 
+        1px 1px 0 var(--white), 
+        -1px -1px 0 var(--white),
+        3px 3px 5px rgba(0, 0, 0, 0.3);
+        
+    margin-top: 0; 
+    margin-bottom: 40px; 
+    padding: 0 20px;
+}
+
+/* --- HIDE THE GROUP IMAGE --- */
+.singles-section .album-image-group {
+    display: none; /* Completely removes the side photo from view */
+}
+
+/* --- Singles Grid (FULL WIDTH and ENLARGED) --- */
+.singles-section .singles-grid {
+    width: 100%; /* Spans full width */
+    display: grid;
+    /* Increased size: Aim for 5 columns on large screens. 
+       minmax value increased from 130px to 180px for larger items. */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; /* Increased gap for better spacing */
+    padding: 10px 0;
+    margin: 0 auto; /* Center the grid */
+}
+
+/* --- Individual Single Item (Link) --- */
+.singles-grid .single-item {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: var(--text-color);
+    /* Ensure smooth transition for the pressable effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Enlargement/Hover Effect (Pressable Effect) --- */
+.singles-grid .single-item:hover {
+    transform: scale(1.08); /* Slightly larger scale up effect */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+}
+
+/* --- Single Cover Placeholder (Square Image Area) --- */
+.singles-grid .single-cover-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-radius: 8px; 
+    margin-bottom: 8px; /* Slightly more space below cover */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* --- Single Title Text --- */
+.singles-grid .single-item p {
+    font-size: 1em; /* Slightly larger text for the title */
+    font-family: "Montserrat", sans-serif;
+    margin: 5px 0 0;
+    line-height: 1.2;
+}
+
+.cover-coconut { background-image: url('img/albums_thecoconutnut.webp'); }
+.cover-kabataang { background-image: url('img/albums_kabataangpinoy.webp'); }
+.cover-up { background-image: url('img/albums_UP.jpg'); }
+.cover-love { background-image: url('img/albums_loveyourself.jfif'); }
+.cover-bata { background-image: url('img/albums_batakayamo.jfif'); }
+.cover-super { background-image: url('img/albums_supercrush.jfif'); }
+.cover-blooming { background-image: url('img/albums_blooming.jfif'); }
+.cover-gandang { background-image: url('img/albums_gandangvitakeratin.jfif'); }
+.cover-joy { background-image: url('img/albums_joytotheworld.avif'); }
+.cover-shine { background-image: url('img/albums_OSSTC.jfif'); }
+.cover-shagidi { background-image: url('img/albums_shagidi.jfif'); }
+.cover-oxygen { background-image: url('img/albums_oxygen.jfif'); }
+.cover-firstlove{ background-image: url('img/albums_firstlove.avif'); }
+
+/* -------------------------------------------
+   1. OT8 GALLERY BANNER SECTION (Top clickable group image)
+   ------------------------------------------- */
+
+.members-main {
+    padding: 0;
+    margin: 0;
+}
+
+.ot8-gallery-banner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Taller for the image strip and title */
+    overflow: hidden;
+    margin-bottom: 0; /* Removing margin-bottom here to match the image grid exactly */
+    
+    /* Mimics the dark background above the main image in the photo */
+    background-color: var(--grey-bg); 
+}
+
+/* The Link Wrapper for the entire banner area */
+.ot8-gallery-banner a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    /* Added transition for smooth hover effect */
+    transition: transform 0.3s ease;
+}
+
+/* NEW: Hover effect for the entire banner link */
+.ot8-gallery-banner a:hover {
+    transform: scale(1.01); /* Subtle scale up */
+    cursor: pointer;
+}
+
+/* The small image strip used for the background */
+.ot8-gallery-banner .small-images-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Styling for the image (placeholder-bini-small-1.jpg) */
+.ot8-gallery-banner .small-images-container img {
+    /* Use the bottom half of the container for the image to mimic the split look */
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    object-position: top center; /* Focuses on the group faces */
+    opacity: 0.8; 
+    filter: brightness(0.7); /* Darken to make title pop */
+}
+
+/* The main title text overlay */
+.ot8-gallery-banner .main-title {
+    position: absolute;
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding-top: 10px;
+    
+    font-family: 'Arial Black', sans-serif; 
+    font-size: clamp(1.8em, 5vw, 4em);
+    font-weight: 900;
+    text-transform: uppercase;
+    
+    /* White text with heavy border/shadow for high contrast (as seen in photo) */
+    color: var(--white);
+    text-shadow: 
+        -2px -2px 0 var(--dark),
+        2px -2px 0 var(--dark),
+        -2px 2px 0 var(--dark),
+        2px 2px 0 var(--dark),
+        0 0 15px rgba(255, 255, 255, 0.4);
+    
+    z-index: 10;
+    margin: 0;
+    /* Added transition for smooth color change */
+    transition: color 0.3s ease;
+}
+
+/* NEW: Change title color on banner hover */
+.ot8-gallery-banner a:hover .main-title {
+    color: var(--primary-pink);
+    text-shadow: 
+        -2px -2px 0 var(--dark),
+        2px -2px 0 var(--dark),
+        -2px 2px 0 var(--dark),
+        2px 2px 0 var(--dark),
+        0 0 15px rgba(255, 134, 195, 0.6); /* Pink glow on hover */
+}
+
+
+/* -------------------------------------------
+   2. MAIN GALLERY SECTION (8 Individual Member Cards in one layer)
+   ------------------------------------------- */
+
+.main-gallery {
+    /* Set to flex to ensure all cards try to fit in one layer */
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if screen is too small */
+    justify-content: center; /* Center the entire row of cards */
+    
+    max-width: 100%; /* Use full width available */
+    /* EDITED: Removed all bottom margin to eliminate extra space between gallery and footer */
+    margin: 0 auto; 
+    padding: 0 5px; /* Minimal horizontal padding */
+    
+    /* Gap is zero to match the photo's edge-to-edge design */
+    gap: 0; 
+}
+
+/* Individual member card link wrapper */
+.main-gallery a {
+    /* Calculate width for 8 items in a row (100% / 8 = 12.5%) */
+    flex: 1 1 12.5%; 
+    max-width: 12.5%; /* On large screens, enforce 1/8th width */
+    text-decoration: none;
+    color: var(--dark);
+    display: block;
+    
+    /* EDITED: Set height to auto so the link wrapper only covers the height of the image/card content */
+    height: auto; 
+    
+    /* Remove any default margin/padding for edge-to-edge look */
+    padding: 0; 
+    margin: 0;
+}
+
+/* Fallback for smaller screens to prevent cards from becoming too thin */
+@media (max-width: 1200px) {
+    /* Allow 4 cards per row */
+    .main-gallery a {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+}
+@media (max-width: 600px) {
+    /* Allow 2 cards per row on mobile */
+    .main-gallery a {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
+
+.member-card-profile {
+    position: relative;
+    width: 100%;
+    height: 700px; /* ⬆ Increased from 420px to crop more */
+    overflow: hidden;
+    border-radius: 0;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.member-card-profile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops to fill container */
+    object-position: center top; /* Focus more on top (faces) */
+    transition: transform 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.member-card-profile p {
+    position: absolute;       /* 👈 Put the name over the bottom of the image */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Optional: hover effect */
+.main-gallery a:hover .member-card-profile {
+    transform: scale(1.05);
+    z-index: 5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--primary-pink);
+    cursor: pointer;
+}
+
+
+/* Text Overlay Styling (AIAH, COLET, etc.) */
+.member-card-profile p {
+    position: absolute;
+    /* EDITED: Moved the text to the very bottom edge of the image */
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    color: var(--white); /* White text */
+    font-family: 'Arial Black', sans-serif;
+    font-size: clamp(1.1em, 2.5vw, 1.8em);
+    font-weight: 800;
+    text-transform: uppercase;
+    
+    /* High-contrast text shadow */
+    text-shadow: 
+        -1px -1px 0 var(--dark),  
+        1px -1px 0 var(--dark),
+        -1px 1px 0 var(--dark),
+        1px 1px 0 var(--dark),
+        0 0 5px rgba(0, 0, 0, 0.8);
+        
+    margin: 0;
+    /* EDITED: Added vertical padding back to give the text space */
+    padding: 5px 0; 
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+/* Change text color on hover (e.g., to the pink accent) */
+.main-gallery a:hover .member-card-profile p {
+    color: var(--primary-pink);
+    text-shadow: 
+        0 0 5px var(--primary-pink), 
+        0 0 10px var(--primary-pink),
+        1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* 1. Body and Background Styling to match the dark concert photo */
+.feedback-body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+}
+
+.feedback-page {
+    /* Using a generic dark/blurred image URL with a large size to mimic the concert background */
+    background-image: url('img/feedback_body.jfif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: Makes it look cool on scroll */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 2. Main Feedback Box (The large semi-transparent gray area) */
+.feedback-box {
+    background-color: var(--box-gray);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px; /* Max width for the content area */
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+}
+
+/* 3. Title Styling (FEEDBACK) with 3D shadow effect */
+.page-title {
+    font-family: var(--title-font);
+    font-size: 3rem; /* Large font size */
+    font-weight: 900;
+    color: var(--title-cyan);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    /* Heavy 3D block shadow effect to match the image */
+    text-shadow: 
+        3px 3px 0 #000,   /* Shadow 1: Black */
+        5px 5px 0 #333,   /* Shadow 2: Dark Gray */
+        7px 7px 0 #1A1A1A; /* Shadow 3: Darker Gray */
+}
+
+/* 4. Tagline */
+.tagline {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* 5. Form Container (The bright pink box) */
+.feedback-form {
+    background-color: var(--form-pink);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Align form elements inside to the left */
+}
+
+/* 6. Form Sections */
+.rating-section, .comment-section {
+    margin-bottom: 20px;
+}
+
+.feedback-form label {
+    display: block;
+    color: var(--text-white);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* 7. Star Rating Styling */
+.star-rating {
+    display: flex;
+    justify-content: center; /* Center the stars horizontally */
+    gap: 10px;
+    font-size: 2.5rem; /* Large stars */
+    margin: 15px 0;
+    color: var(--text-white); /* White stars on pink background */
+}
+
+.star-rating i {
+    cursor: pointer;
+    transition: color 0.2s, transform 0.1s;
+}
+
+/* Styles for filled stars and hover effect */
+.star-rating i.fas,
+.star-rating i:hover ~ i.fas {
+    color: var(--text-white); /* Maintain white for filled stars */
+}
+
+/* This is the magic for outlined stars becoming solid white on hover/click */
+.star-rating i:hover, 
+.star-rating i.hovered {
+    color: var(--text-white);
+    font-weight: 900;
+    transform: scale(1.1);
+}
+/* When a star is filled (fa-star to fas fa-star), it remains white */
+.star-rating i.fas {
+    font-weight: 900;
+}
+
+
+/* 8. Textarea Styling */
+textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    resize: vertical;
+    min-height: 100px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    font-size: 1rem;
+}
+
+/* 9. Submit Button Styling */
+.submit-button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 20px auto 0;
+    padding: 15px 20px;
+    background-color: var(--title-cyan);
+    color: var(--text-white);
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px; /* Heavily rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover {
+    background-color: #38A6A8; /* Slightly darker teal on hover */
+    transform: translateY(-2px);
+}
+
+#thank-you-message h1 {
+    font-size: 2.5rem;
+    color: var(--title-cyan);
+    margin-bottom: 10px;
+}
+#thank-you-message p {
+        color: var(--text-white);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    .star-rating {
+        font-size: 2rem;
+    }
+}
+
+.survey-body {
+    font-family: var(--body-font);
+    background-color: #000;
+    /* Mock background to visualize theme */
+    background-image: url('img/survey_bgimage.jfif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.survey-page {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* 2. Survey Card (Main Container) */
+.survey-card {
+    background-color: var(--box-gray);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+/* 3. Title Styling */
+.survey-title {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--title-cyan);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    /* Heavy 3D block shadow effect to match the theme */
+    text-shadow: 
+        3px 3px 0 #000, 
+        5px 5px 0 #333, 
+        7px 7px 0 #1A1A1A;
+}
+
+.survey-subtitle {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* 4. Form Container (Bright Pink) */
+.survey-form {
+    background-color: var(--form-pink);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* 5. Form Groups and Labels */
+.form-group {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    /* Subtle contrast background within the pink form */
+    background-color: rgba(255, 255, 255, 0.15); 
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-white);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* 6. Input, Select, and Textarea Styling */
+input[type="text"],
+select,
+textarea {
+    width: 90%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid var(--input-border);
+    background-color: var(--input-background);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--title-cyan);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(77, 194, 197, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* 7. Radio/Checkbox Options Styling */
+.radio-options,
+.checkbox-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.radio-options label,
+.checkbox-options label {
+    display: flex;
+    align-items: center;
+    font-weight: 400; 
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 5px 0;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.radio-options label:hover,
+.checkbox-options label:hover {
+    color: var(--title-cyan);
+}
+
+/* Custom Checkbox/Radio Appearance */
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border: 2px solid var(--text-white);
+    border-radius: 50%; /* Circle for radio */
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+input[type="checkbox"] {
+    border-radius: 4px; /* Square for checkbox */
+}
+
+/* Checked state for Radio */
+input[type="radio"]:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--title-cyan);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+/* Checked state for Checkbox */
+input[type="checkbox"]:checked {
+    background-color: var(--title-cyan);
+    border-color: var(--title-cyan);
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\f00c'; /* Font Awesome checkmark - Requires Font Awesome link in HTML head */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 10px;
+    color: var(--text-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hidden "Other" input styling */
+.hidden-input {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    display: none; /* Initially hidden */
+}
+.hidden-input label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.hidden-input.active {
+    display: block;
+}
+
+/* 8. Submit Button Styling */
+.submit-survey-button {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin: 30px auto 0;
+    padding: 15px 25px;
+    background-color: var(--title-cyan);
+    color: var(--text-white);
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-survey-button:hover {
+    background-color: #38A6A8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 9. Modal Overlay and Content Styling (THE FIX) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark, high-contrast overlay */
+    display: none; /* Initially hidden, controlled by JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: var(--form-pink); /* Use the pink theme color */
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    transform: scale(1);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-icon {
+    color: var(--title-cyan); /* Cyan color for the heart icon */
+    margin-bottom: 15px;
+    animation: pulse 1.5s infinite;
+}
+
+.modal-title {
+    font-family: var(--title-font);
+    color: var(--text-white);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #000;
+}
+
+.modal-message {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.small-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.modal-close-button {
+    background-color: var(--title-cyan);
+    color: var(--text-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.modal-close-button:hover {
+    background-color: #38A6A8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* 10. Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .survey-title {
+        font-size: 2.2rem;
+    }
+    .survey-subtitle {
+        font-size: 1rem;
+    }
+    .survey-card {
+        padding: 30px 15px;
+    }
+    .survey-form {
+        padding: 20px;
+    }
+}
+
+footer {
+    background-color: var(--secondary-blue); 
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    margin-top: auto; 
+}
+
+@media (max-width: 768px) {
+    /* Header and Navbar Adjustments */
+    header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header img {
+        height: 120px;
+        margin-top: 10px;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    /* Hero Banner Adjustments */
+    .hero-banner {
+        height: 600px;
+    }
+
+    .hero-banner .hero-content h1 {
+        font-size: 2.5em;
+        padding-top: 20px;
+    }
+
+    .hero-banner .hero-content .group-name {
+        font-size: 5em;
+        padding-top: 3em;
+    }
+
+    /* Group Intro Section */
+    .group-intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .image-left {
+        display: none;
+    }
+
+    .text-right {
+        grid-column: 1;
+        grid-row: 1;
+        padding-left: 0;
+    }
+
+    .text-right .nations-group {
+        font-size: 3em;
+    }
+
+    .description-area {
+        grid-column: 1;
+        grid-row: 2;
+        padding-top: 20px;
+    }
+
+    .member-profiles {
+        display: block;
+    }
+
+    .member-profiles button{
+        display: block;
+    }
+
+    .member-card {
+        margin: 20px auto;
+    }
+
+    /* About Section */
+    .about-us-section {
+        padding: 40px 20px;
+    }
+
+    .header-banner {
+        display: none; /* Remove the banner in the about */
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-text {
+        font-size: 1.1em;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    /* History Section */
+    .history-section {
+        padding: 20px 20px 40px;
+    }
+
+    .history-banner {
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .history-title {
+        font-size: 2em;
+    }
+
+    .subsection-title {
+        font-size: 1.5em;
+    }
+
+    .info-block {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .info-block.reverse {
+        flex-direction: column;
+    }
+
+    .block-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .current-status-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .status-image-wrapper {
+        width: 100%;
+    }
+
+    /* Achievements Section */
+    .achievements-section {
+        padding: 20px 20px 40px;
+    }
+
+    .achievements-banner {
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .achievements-title {
+        font-size: 2em;
+    }
+
+    .info-block {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .info-block > .block-image:nth-child(1),
+    .info-block > .block-image:nth-child(2) {
+        grid-column: 1;
+        grid-row: auto;
+        margin-bottom: 10px;
+    }
+
+    .info-block > .text-content {
+        grid-column: 1;
+        grid-row: auto;
+        padding-top: 0;
+    }
+
+    .text-block-group {
+        padding: 5px;
+    }
+
+    .record-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .record-image {
+        display: none;
+    }
+
+    .record-details {
+        flex: 1;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1em; /* Adjusted smaller */
+    }
+
+    .record-title {
+        font-family: 'Arial Black', sans-serif;
+        font-size: 1.5em; /* Adjusted smaller */
+        font-weight: 900;
+        margin-top: 0;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .record-details p {
+        font-size: 0.95em; /* Adjusted smaller */
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 5px 0 20px 0;
+    }
+
+    .record-details ul li {
+        font-size: 0.95em; /* Adjusted smaller */
+        line-height: 1.6;
+        color: var(--text-color);
+        margin-bottom: 8px;
+    }
+
+    /* Awards Section */
+    .awards-table-section {
+        padding: 20px 0 40px;
+    }
+
+    .awards-banner {
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .awards-title {
+        font-size: 2em;
+    }
+
+    .awards-header {
+        padding: 0 20px;
+    }
+
+    .awards-header h2 {
+        font-size: 2em;
+    }
+
+    .awards-table-wrapper {
+        margin: 0 10px;
+    }
+
+    table {
+        font-size: 0.9em; /* Make table smaller */
+    }
+
+    th, td {
+        padding: 8px 5px; /* Reduce padding for smaller table */
+    }
+
+    /* Gallery Section */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .final-statement-bar {
+        padding: 20px 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Intro Banner */
+    .intro-banner {
+        height: 400px;
+    }
+
+    .intro-banner .banner-text {
+        font-size: 2em;
+        padding: 20px 10px;
+    }
+
+    .intro-banner .banner-image img {
+        height: 500px;
+    }
+
+    /* Discography */
+    .discography-container {
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .album-row {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .album-row .album-cover {
+        width: 250px;
+        height: 250px;
+    }
+
+    .album-row .song-list {
+        padding-top: 0;
+    }
+
+    /* EP Section */
+    .ep-section {
+        padding: 0 20px;
+    }
+
+    .ep-row {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .ep-row .ep-cover {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ep-row:nth-child(2) {
+        flex-direction: column;
+    }
+
+    /* Singles Section */
+    .singles-section {
+        padding: 0 20px;
+    }
+
+    .singles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    /* Members Gallery */
+    .ot8-gallery-banner {
+        height: 150px;
+    }
+
+    .ot8-gallery-banner .main-title {
+        font-size: 2em;
+        top: 50%;
+    }
+
+    .main-gallery a {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+
+    .member-card-profile {
+        height: 500px;
+    }
+
+    .member-card-profile p {
+        font-size: 1.2em;
+    }
+
+    /* Feedback Page */
+    .feedback-page {
+        padding: 10px;
+    }
+
+    .feedback-box {
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .feedback-form {
+        padding: 20px;
+    }
+
+    .star-rating {
+        font-size: 2rem;
+    }
+
+    .submit-button {
+        width: 90%;
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+
+    /* Survey Page */
+    .survey-page {
+        padding: 20px 10px;
+    }
+
+    .survey-card {
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+
+    .survey-title {
+        font-size: 2rem;
+    }
+
+    .survey-subtitle {
+        font-size: 1rem;
+    }
+
+    .survey-form {
+        padding: 20px;
+    }
+
+    .submit-survey-button {
+        width: 90%;
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-message {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px 0;
+        font-size: 1em;
+    }
+}
+
+
+/* Responsive adjustments for tablets (max-width: 768px) - Unchanged */
+@media (max-width: 768px) {
+    /* Adjust header and navbar for smaller screens */
+    header {
+        height: auto;
+        padding: 10px;
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    /* Hero banner adjustments */
+    .hero-banner {
+        height: 600px;
+    }
+    .hero-banner .hero-content h1 {
+        font-size: 3em;
+        padding-top: 30px;
+    }
+    .hero-banner .hero-content .group-name {
+        font-size: 5em;
+        padding-top: 2em;
+    }
+
+    /* Group intro section */
+    .group-intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+    .image-left {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        margin-left: 0;
+        padding-bottom: 50%;
+    }
+    .text-right {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding-left: 0;
+        text-align: center;
+    }
+    .description-area {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        padding-top: 20px;
+    }
+
+    /* Member profiles - Keep all 8 cards, adjust to 2 columns (4 rows) */
+    .member-profiles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 40px 10px;
+    }
+
+    /* About us section */
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about-text {
+        padding-left: 0;
+        text-align: center;
+    }
+    .about-image {
+        margin-left: 0;
+    }
+
+    /* History section */
+    .info-block {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .info-block.reverse {
+        flex-direction: column;
+    }
+    .block-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Achievements section */
+    .info-block {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .info-block > .block-image:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .info-block > .block-image:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .info-block > .text-content {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    /* Awards table */
+    .awards-table-wrapper {
+        margin: 0 10px;
+    }
+    table {
+        min-width: 600px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Discography */
+    .album-row, .ep-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .album-row .album-cover, .ep-row .ep-cover {
+        width: 250px;
+        height: 250px;
+    }
+    .singles-section .singles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    /* Members gallery - Keep all 8 cards, adjust to 4 per row (2 rows) */
+    .main-gallery a {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+    .member-card-profile {
+        height: 500px;
+    }
+
+    /* Feedback and survey */
+    .feedback-box, .survey-card {
+        max-width: 500px;
+        padding: 30px 20px;
+    }
+    .page-title, .survey-title {
+        font-size: 2.5rem;
+    }
+    .star-rating {
+        font-size: 2rem;
+    }
+}
+
+/* Print media query: Hide images, show only details */
+@media print {
+    /* Hide all images */
+    img, .hero-banner, .image-left, .member-card, .block-image, .album-cover, .ep-cover, .single-cover-placeholder, .member-card-profile img, .banner-image, .history-image-banner, .achievements-image-banner, .awards-image-banner, .gallery-grid img, .ot8-gallery-banner .small-images-container img {
+        display: none !important;
+    }
+
+    /* Hide backgrounds and non-essential elements */
+    body, header, nav, main, footer, .hero-banner, .group-intro, .member-profiles, .header-banner, .about-us-section, .history-section, .achievements-section, .awards-table-section, .awards-gallery-section, .intro-banner, .discography-container, .ep-section, .singles-section, .members-main, .feedback-page, .survey-page {
+        background: none !important;
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* Ensure text is visible and printable */
+    * {
+        color: black !important;
+        background: white !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* Adjust fonts for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Hide interactive elements */
+    button, input, textarea, select, .submit-button, .submit-survey-button, .learn-more, .back-to-top-button {
+        display: none !important;
+    }
+
+    /* Show only text content */
+    .text-right, .description-area, .about-text, .text-content, .record-details, .awards-header, table, .final-statement-bar, .album-row .song-list, .ep-row .song-list, .singles-grid .single-item p, .member-card-profile p, .feedback-form, .survey-form {
+        display: block !important;
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Ensure lists and tables are printable */
+    ol, ul {
+        list-style-type: decimal !important;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    /* Page breaks */
+    .section-title, .subsection-title {
+        page-break-before: always;
+    }
+}
