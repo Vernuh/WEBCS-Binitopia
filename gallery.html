@@ -121,17 +121,17 @@
             const imgSrc = item.getAttribute('data-src');
             const likeIcon = item.querySelector('.like-icon');
 
-            // ✅ Load liked state from localStorage
+            // Load liked state from localStorage
             const isLiked = localStorage.getItem(`liked_${imgSrc}`);
             if (isLiked === 'true') {
                 likeIcon.classList.add('liked');
             }
 
             likeIcon.addEventListener('click', function(event) {
-                event.stopPropagation(); // prevent opening the modal
+                event.stopPropagation(); 
                 this.classList.toggle('liked');
 
-                // ✅ Save or remove liked state in localStorage
+                // Save or remove liked state in localStorage
                 if (this.classList.contains('liked')) {
                     localStorage.setItem(`liked_${imgSrc}`, 'true');
                 } else {
