@@ -23,6 +23,11 @@ body {
     min-height: 100vh;
 }
 
+header nav li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
 /* -------------------- Main Content Wrapper -------------------- */
 main {
     max-width: 1000px; 

@@ -2125,7 +2125,7 @@ footer {
     margin-top: auto; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 430px) {
     /* Header and Navbar Adjustments */
     header {
         height: auto;
@@ -2570,22 +2570,28 @@ footer {
 
 /* Responsive adjustments for tablets (max-width: 768px) - Unchanged */
 @media (max-width: 768px) {
-    /* Adjust header and navbar for smaller screens */
+
     header {
         height: auto;
-        padding: 10px;
+        padding: 0;
     }
-    .navbar {
-        flex-direction: column;
-        padding: 10px 20px;
+
+    header img {
+        height: 120px;
+        margin-top: 10px;
     }
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    nav ul li a {
+
+    header nav li a{
         font-size: 1.2em;
+        padding-left: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
     }
 
     /* Hero banner adjustments */
@@ -2612,7 +2618,7 @@ footer {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         margin-left: 0;
-        padding-bottom: 50%;
+        /* padding-bottom: 50%; */
     }
     .text-right {
         grid-column: 1 / 2;
@@ -2626,27 +2632,59 @@ footer {
         padding-top: 20px;
     }
 
-    /* Member profiles - Keep all 8 cards, adjust to 2 columns (4 rows) */
+    /* --- Base grid layout --- */
     .member-profiles {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
-        padding: 40px 10px;
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
+    /* Each card container */
+    .member-card {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        height: 250px; /* ✅ FIXED height for all cards */
+        display: flex;
+        align-items: end; /* optional: text stays at bottom */
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
     }
 
     /* About us section */
     .about-content {
         flex-direction: column;
         gap: 20px;
+        margin-left: 25px;
     }
     .about-text {
+        display: flex;
         padding-left: 0;
         text-align: center;
     }
     .about-image {
-        margin-left: 0;
+        margin-left: 75px;
     }
 
     /* History section */
+
+    .current-status-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .status-image-wrapper {
+        padding-top: 20px;
+        width: 100%;
+    }
+
     .info-block {
         flex-direction: column;
         gap: 20px;
@@ -2654,6 +2692,18 @@ footer {
     .info-block.reverse {
         flex-direction: column;
     }
+
+    .record-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .record-card img{
+        width: 80%;
+        height: auto;
+    }
+
     .block-image {
         width: 100%;
         height: auto;
@@ -2691,14 +2741,25 @@ footer {
     }
 
     /* Discography */
-    .album-row, .ep-row {
+    .album-row{
         flex-direction: column;
         gap: 20px;
     }
-    .album-row .album-cover, .ep-row .ep-cover {
-        width: 250px;
-        height: 250px;
+    .album-row .album-cover{
+        width: 230px;
+        height: 230px;
     }
+
+    /* Push down the STUDIO ALBUMS title */
+    .album-section .section-title {
+        margin-top: 40px;  /* Adjust this value as needed */
+        text-align: center;
+    }
+
+    #albums .section-title {
+        margin-top: 40px;
+    }
+
     .singles-section .singles-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
