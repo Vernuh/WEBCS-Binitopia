@@ -2423,7 +2423,17 @@ footer {
         padding-top: 20px;
     }
 
-    
+    .member-profiles {
+        display: block;
+    }
+
+    .member-profiles button{
+        display: block;
+    }
+
+    .member-card {
+        margin: 20px auto;
+    }
 
     /* About Section */
     .about-us-section {
